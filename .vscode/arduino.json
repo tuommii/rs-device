@@ -1,0 +1,6 @@
+{
+    "board": "arduino:samd:mkr1000",
+    "sketch": "device.ino",
+    "programmer": "ArduinoISP",
+    "port": "COM3"
+}

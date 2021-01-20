@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\libraries\\SPI\\src",
+                "C:\\Program Files (x86)\\Arduino\\libraries\\LiquidCrystal\\src",
+                "C:\\Users\\tuomm\\Documents\\Arduino\\libraries\\WiFi101\\src",
+                "C:\\Users\\tuomm\\Documents\\Arduino\\libraries\\MFRC522\\src",
+                "C:\\Users\\tuomm\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
+                "C:\\Users\\tuomm\\Documents\\Arduino\\libraries\\**",
+                "C:\\Program Files (x86)\\Arduino\\libraries\\**",
+                "C:\\Users\\tuomm\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.11\\**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "USBCON",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64",
+            "forcedInclude": [
+                "C:\\Users\\tuomm\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.11\\cores\\arduino\\Arduino.h"
+            ]
+        }
+    ],
+    "version": 4
+}
