@@ -75,6 +75,9 @@ const int RESPONSE_BUFFER = 64 + 1;
 // State when save request has sent
 const int GAME_SAVED = -1;
 
+// defined in server
+String SUCCESS_MESSAGE = "ok";
+
 // These will be set when server responses
 String winnerName = "";
 String loserName = "";
@@ -236,7 +239,11 @@ void readResponse() {
 			// Update state
 			// After game is saved, reset state
 			if (playersReaded == GAME_SAVED) {
-				showMessage("Game uploaded", 2000);
+				String message = "Game uploaded!";
+				if (!temp.equals(SUCCESS_MESSAGE)) {
+					message = "Save failed!";
+				}
+				showMessage(message, 2000);
 				resetState();
 				showMainScreen();
 			}
