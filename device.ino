@@ -70,13 +70,15 @@ bool canSave = false;
 // When reading response, skip headers before interesting data comes
 const int HEADER_ROWS_TO_SKIP = 5;
 // Read only x bytes from interesting part
-const int RESPONSE_BUFFER = 24;
+const int RESPONSE_BUFFER = 64 + 1;
 // State when save request has sent
 const int GAME_SAVED = -1;
 
 // These will be set when server responses
 String winnerName = "";
 String loserName = "";
+String winnerShort = "";
+String loserShort = "";
 // Readed tag
 String tag = "";
 
@@ -204,14 +206,16 @@ void readResponse() {
 			// One player readed, not in state yet
 			if (playersReaded == 0) {
 				winnerName = temp;
-				showOnePlayer(winnerName);
+				winnerShort = temp.substring(0, 15);
+				showOnePlayer(winnerShort);
 				startTimeoutClock();
 			}
 			// Two players readed, not in state yet
 			else if (playersReaded == 1) {
 				disableTimeoutClock();
 				loserName = temp;
-				showBothPlayers(winnerName, loserName, 2000);
+				loserShort = temp.substring(0, 15);
+				showBothPlayers(winnerShort, loserShort, 2000);
 			}
 
 
