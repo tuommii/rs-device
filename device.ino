@@ -70,6 +70,7 @@ bool canSave = false;
 // When reading response, skip headers before interesting data comes
 const int HEADER_ROWS_TO_SKIP = 5;
 // Read only x bytes from interesting part
+// Username can't be longer than this
 const int RESPONSE_BUFFER = 64 + 1;
 // State when save request has sent
 const int GAME_SAVED = -1;
@@ -206,7 +207,14 @@ void readResponse() {
 			// One player readed, not in state yet
 			if (playersReaded == 0) {
 				winnerName = temp;
-				winnerShort = temp.substring(0, 15);
+
+				if (winnerName.length() > 16) {
+					winnerShort = temp.substring(0, 12);
+					winnerShort += "...";
+				} else {
+					winnerShort = temp.substring(0, 15);
+				}
+
 				showOnePlayer(winnerShort);
 				startTimeoutClock();
 			}
@@ -214,7 +222,13 @@ void readResponse() {
 			else if (playersReaded == 1) {
 				disableTimeoutClock();
 				loserName = temp;
-				loserShort = temp.substring(0, 15);
+				if (loserName.length() > 16) {
+					loserShort = temp.substring(0, 12);
+					loserShort += "...";
+				} else {
+					loserShort = temp.substring(0, 15);
+				}
+				//loserShort = temp.substring(0, 15);
 				showBothPlayers(winnerShort, loserShort, 2000);
 			}
 
