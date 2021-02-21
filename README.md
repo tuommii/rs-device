@@ -8,5 +8,5 @@
 </p>
 
 ## Notes
-In this [Video](/assets/arduino-mkr1000-compressed.mov) you can see this gadget in action.
+[Video](/assets/arduino-mkr1000-compressed.mov) where you can see this gadget in action.
 - API and UI are still private
