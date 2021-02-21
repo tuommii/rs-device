@@ -1,5 +1,5 @@
 <h1 align="center">
-	A device for reading winner and loser of played game, used for stats
+	A device for reading winner and loser of played game and then sending those to server, used for stats.
 </h1>
 
 <p align="center">
