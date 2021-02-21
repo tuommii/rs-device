@@ -128,14 +128,14 @@ void handleTrafficBetweenClientAndServer() {
 			Serial.println("BOTH PLAYERS READ, SAVE AVAILABLE!");
 			Serial.println("Winner: " + winnerName);
 			Serial.println("Loser: " + loserName);
-			makeRequest(true, "/iot/", winnerName + "," + loserName);
+			makeRequest(true, "/api/iot/", winnerName + "," + loserName);
 			canSave = false;
 			playersReaded = GAME_SAVED;
 		}
 		// recognize player
 		else
 		{
-			int error = makeRequest(canAuthenticate, "/tag/", tag);
+			int error = makeRequest(canAuthenticate, "/api/tag/", tag);
 			if (error)
 				return ;
 		}

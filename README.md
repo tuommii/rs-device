@@ -1,12 +1,12 @@
 <h1 align="center">
-	A device for sending played games to a server
+	A device for reading winner and loser of played game, used for stats
 </h1>
 
 <p align="center">
 	<br>
-	<img width=400 src="assets/screenshot.png">
+	<img width=400 src="assets/proto_without_breadboard.jpeg">
 </p>
 
 ## Notes
-[Video](/assets/arduino-mkr1000-compressed.mov) is also available for download
+In this [Video](/assets/arduino-mkr1000-compressed.mov) you can see this gadget in action.
 - API and UI are still private
